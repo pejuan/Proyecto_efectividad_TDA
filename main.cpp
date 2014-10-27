@@ -25,9 +25,9 @@ int main(int argc, char** argv) {
 	TDAList* lista;
 	int pos,elemento;
 	clock_t initial,final;
-	lista = new fsarrayList(5000);
+	//lista = new fsarrayList(5000);
 	//lista = new cursor(5000);
-	//lista = new SLinkedList();
+	lista = new SLinkedList();
 	srand(time(0));
 	for (int i = 0; i < 5000; ++i){
 		pos = (rand() % (int)(lista->size()+1));
@@ -37,20 +37,20 @@ int main(int argc, char** argv) {
 		//final = clock();
 		//cout<<final<<" ";
 	}
-	initial = clock();
+	/*initial = clock();
 	Object* e;
 	cout<<"antes for grande"<<endl;
 	for (int i = 0; i < 5000; ++i)
 	{
 		
-		/* code */
+		
 		pos = (rand() % (int)(lista->size()+1));
 		e = lista->get(pos);
 		final = clock()-initial;
 		cout<<final<<" ";
 
 
-	}
+	}*/
 
 	cout<<"SIZE:"<<lista->size()<<endl;
 	delete lista;

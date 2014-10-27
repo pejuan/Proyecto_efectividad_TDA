@@ -33,11 +33,14 @@ bool SLinkedList::insert(Object* data,int pos){
 			for(int i = 0; i < pos-1; i++){
 				tmpn = tmpn->getNext();
 			}
-			neo->setNext(tmpn->getNext());
-			tmpn->setNext(neo);
 
 			if(pos == ssize)
 				neo->setNext(NULL);
+			else{
+				neo->setNext(tmpn->getNext());
+			}
+
+			tmpn->setNext(neo);
 
 		}
 	}
