@@ -11,7 +11,6 @@
 
 class cursor : public TDAList
 {
-	//parecida al nodo de una lista enlazada.
 	struct Registry
 	{
 		int prev, next;
@@ -24,7 +23,6 @@ class cursor : public TDAList
 	int findNextSlot() const;
 
 public:
-	//Constructor. Recibe un entero que determina su capacidad.
 	cursor(int=25);
 	~cursor();
 	virtual bool insert(Object*, int);
